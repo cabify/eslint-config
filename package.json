@@ -1,0 +1,37 @@
+{
+  "name": "@cabify/eslint-config",
+  "version": "0.0.1",
+  "description": "eslint config for Cabify JS projects",
+  "license": "Apache-2.0",
+  "main": "./legacy.js",
+  "exports": {
+    ".": "./legacy.js",
+    "./legacy": "./legacy.js",
+    "./recommended": "./recommended.js"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.9.0",
+    "@typescript-eslint/parser": "^4.9.0",
+    "confusing-browser-globals": "^1.0.10",
+    "eslint-config-prettier": "^8.0.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^25.0.0",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-lodash": "^7.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0"
+  },
+  "peerDependencies": {
+    "eslint": ">=7.14.0",
+    "prettier": ">=2.2.1"
+  },
+  "scripts": {
+    "test": "true",
+    "dist": "true",
+    "dist:watch": "true",
+    "prepublishOnly": "npm run dist",
+    "prerelease": "npm version prerelease"
+  }
+}
