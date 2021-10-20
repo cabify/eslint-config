@@ -217,7 +217,8 @@ Required changes:
 
 Just merge to `main` branch and then pull and run:
 
-- yarn publish:(major|minor|patch)
+- `yarn publish:(major|minor|patch)`
+- `git push --follow-tags`
 
 This will trigger a workflow on Github which will publish to npm eventually.
 

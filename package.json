@@ -33,10 +33,10 @@
     "lint:check": "eslint .",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "publish:major": "npm version major && npm publish",
-    "publish:minor": "npm version minor && npm publish",
-    "publish:patch": "npm version patch && npm publish",
-    "publish:canary": "npm version prerelease && npm publish"
+    "publish:major": "npm version major",
+    "publish:minor": "npm version minor",
+    "publish:patch": "npm version patch",
+    "publish:canary": "npm version prerelease"
   },
   "devDependencies": {
     "eslint": "^8.0.1",
