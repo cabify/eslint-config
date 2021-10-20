@@ -213,6 +213,14 @@ Required changes:
 - `@typescript-eslint/no-var-requires` forces again to not use `require`.
 - `@typescript-eslint/ban-types`, forbid usage of `String`, `Number` (in favor of `string`, `number`) and `{}`/`object` for types (in favor of `Record` type utility)
 
+# Publish new version
+
+Just merge to `main` branch and then pull and run:
+
+- yarn publish:(major|minor|patch)
+
+This will trigger a workflow on Github which will publish to npm eventually.
+
 # Former contributors
 
 Aarón García
