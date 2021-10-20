@@ -216,22 +216,41 @@ Required changes:
 # Former contributors
 
 Aarón García
+
 Alejandro Frías
+
 Alejandro Gallardo Escobar
+
 alejandro Leon
+
 Alejandro Molero
+
 Alejandro Ruiz Temina
+
 Arián Zargarán Florez
+
 Carlos Castillo Alarcón
+
 Christian de Barrio Arribas
+
 Cristina Martín Gago
+
 David Asensio Cañas
+
 Francisco Sanchez
+
 Javier López Pardo
+
 Jesus Merino
+
 Leire Rico Prieto
+
 Ricardo Boluda Hernández
+
 Rodrigo Erades Alonso 
+
 sergio ramirez
+
 Valentin Berlin
+
 Yago Quiñoy Lobariñas
