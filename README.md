@@ -1,2 +1,2 @@
 # eslint-config
-Eslint configuration for
+Eslint configuration for Cabify project
