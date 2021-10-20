@@ -1,0 +1,16 @@
+/packages/**/node_modules
+/packages/**/dist
+/packages/**/es2015
+/packages/**/coverage
+/packages/marshal-formularious
+/packages/marshal-codemods/test
+coverage/*
+/node_modules
+*.d.ts
+/www
+.loki/*
+/docs
+/lerna.json
+/storybook/icons/iconsArray.js
+/CHANGELOG.md
+dist

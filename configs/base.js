@@ -1,37 +1,37 @@
-const { isPackageAvailable } = require("../utils");
+const { isPackageAvailable } = require('../utils');
 
-const isTSAvailable = isPackageAvailable("typescript");
-const isJestAvailable = isPackageAvailable("jest");
+const isTSAvailable = isPackageAvailable('typescript');
+const isJestAvailable = isPackageAvailable('jest');
 
 const configs = [
-  "./best-practices",
-  "./errors",
-  "./es6",
-  "./imports",
-  "./node",
-  "./promises",
-  "./strict",
-  "./style",
-  "./variables",
-  "./react",
-  "./lodash",
-  "./react-a11y",
-  isJestAvailable && "./jest",
+  './best-practices',
+  './errors',
+  './es6',
+  './imports',
+  './node',
+  './promises',
+  './strict',
+  './style',
+  './variables',
+  './react',
+  './lodash',
+  './react-a11y',
+  isJestAvailable && './jest',
 ].filter(Boolean);
 
 const overrides = [
   isTSAvailable && {
-    files: ["**/*.ts", "**/*.tsx"],
-    excludedFiles: "*.d.ts",
-    extends: ["./ts"],
+    files: ['**/*.ts', '**/*.tsx'],
+    excludedFiles: '*.d.ts',
+    extends: ['./ts'],
   },
   {
-    files: ["*.story.tsx", "*.stories.tsx"],
-    extends: ["./storybook"],
+    files: ['*.story.tsx', '*.stories.tsx'],
+    extends: ['./storybook'],
   },
   {
-    files: ["postcss.config.js"],
-    extends: ["./postcss"],
+    files: ['postcss.config.js'],
+    extends: ['./postcss'],
   },
 ].filter(Boolean);
 
@@ -43,10 +43,10 @@ module.exports = {
   extends: configs,
   parserOptions: {
     ecmaVersion: 2018,
-    sourceType: "module",
+    sourceType: 'module',
   },
   rules: {
-    strict: "error",
+    strict: 'error',
   },
   overrides,
 };

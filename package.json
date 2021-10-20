@@ -28,10 +28,18 @@
     "prettier": ">=2.2.1"
   },
   "scripts": {
-    "test": "true",
-    "dist": "true",
-    "dist:watch": "true",
-    "prepublishOnly": "npm run dist",
-    "prerelease": "npm version prerelease"
+    "test": "yarn lint:check && yarn format:check",
+    "lint": "eslint . --fix",
+    "lint:check": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "publish:major": "npm version major && npm publish",
+    "publish:minor": "npm version minor && npm publish",
+    "publish:patch": "npm version patch && npm publish",
+    "publish:canary": "npm version prerelease && npm publish"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.1",
+    "prettier": "^2.4.1"
   }
 }

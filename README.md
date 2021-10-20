@@ -247,7 +247,7 @@ Leire Rico Prieto
 
 Ricardo Boluda Hernández
 
-Rodrigo Erades Alonso 
+Rodrigo Erades Alonso
 
 sergio ramirez
 
