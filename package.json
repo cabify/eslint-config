@@ -41,5 +41,9 @@
   "devDependencies": {
     "eslint": "^8.0.1",
     "prettier": "^2.4.1"
+  },
+  "volta": {
+    "node": "14.18.1",
+    "yarn": "1.22.17"
   }
 }
