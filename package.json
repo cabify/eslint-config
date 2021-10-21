@@ -1,7 +1,7 @@
 {
   "name": "@cabify/eslint-config",
   "version": "0.0.1",
-  "description": "eslint config for Cabify JS projects",
+  "description": "ESLint config for Cabify Javascript projects",
   "license": "Apache-2.0",
   "main": "./legacy.js",
   "exports": {
