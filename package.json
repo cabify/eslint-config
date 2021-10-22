@@ -2,15 +2,39 @@
   "name": "@cabify/eslint-config",
   "version": "0.0.2",
   "description": "ESLint config for Cabify Javascript projects",
+  "scripts": {
+    "test": "npm run lint:check && npm run format:check",
+    "lint": "eslint . --fix",
+    "lint:check": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "publish:major": "npm version major",
+    "publish:minor": "npm version minor",
+    "publish:patch": "npm version patch",
+    "publish:canary": "npm version prerelease"
+  },
   "license": "Apache-2.0",
+  "repository": "github:cabify/eslint-config",
+  "homepage": "https://github.com/cabify/eslint-config#readme",
+  "bugs": {
+    "url" : "https://github.com/cabify/eslint-config/issues"
+  },
+  "keywords": [
+    "javascript",
+    "react",
+    "check",
+    "checker",
+    "code",
+    "eslint",
+    "lint",
+    "style",
+    "standards"
+  ],
   "main": "./legacy.js",
   "exports": {
     ".": "./legacy.js",
     "./legacy": "./legacy.js",
     "./recommended": "./recommended.js"
-  },
-  "publishConfig": {
-    "access": "public"
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^4.9.0",
@@ -30,23 +54,14 @@
     "eslint": ">=7.14.0",
     "prettier": ">=2.2.1"
   },
-  "scripts": {
-    "test": "yarn lint:check && yarn format:check",
-    "lint": "eslint . --fix",
-    "lint:check": "eslint .",
-    "format": "prettier --write .",
-    "format:check": "prettier --check .",
-    "publish:major": "npm version major",
-    "publish:minor": "npm version minor",
-    "publish:patch": "npm version patch",
-    "publish:canary": "npm version prerelease"
-  },
   "devDependencies": {
     "eslint": "8.0.1",
     "prettier": "2.4.1"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "volta": {
-    "node": "14.18.1",
-    "yarn": "1.22.17"
+    "node": "14.18.1"
   }
 }
