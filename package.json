@@ -9,6 +9,9 @@
     "./legacy": "./legacy.js",
     "./recommended": "./recommended.js"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^4.9.0",
     "@typescript-eslint/parser": "^4.9.0",
