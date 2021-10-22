@@ -182,41 +182,13 @@ If you want to maintain the formatting within ESLint, you can opt to extend the 
 }
 ```
 
-## Migration
-
-### From 7 > 8
-
-The biggest change here is we adopted new major version of `@typescript-eslint/eslint-plugin` and `@typescript-eslint/parser`. This upgrade comes with a ton of changes related with deprecated rules such:
-
-- `@typescript-eslint/class-name-casing`
-- `@typescript-eslint/interface-name-prefix`
-- `@typescript-eslint/generic-type-naming`
-- `@typescript-eslint/camelcase`
-- `@typescript-eslint/ban-ts-ignore`
-
-New stricter rules were enabled from the suite of recommended ones. We have disabled them due to requiring big changes to adopt them, although it's recommended to try to enable some of them into your projects as they enforce type safety:
-
-- [`@typescript-eslint/explicit-module-boundary-types`](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/explicit-module-boundary-types.md)
-- [`@typescript-eslint/no-unsafe-assignment`](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unsafe-assignment.md)
-- [`@typescript-eslint/no-unsafe-member-access`](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unsafe-member-access.md)
-- [`@typescript-eslint/no-unsafe-call`](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unsafe-call.md)
-- [`@typescript-eslint/no-unsafe-return`](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unsafe-return.md)
-- [`@typescript-eslint/ban-types`](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/ban-types.md)
-
-Required changes:
-
-- Remove comments for any deprecated rules listed above.
-- Change `@typescript-eslint/camelcase` for `eslint/camelcase` disable comments.
-- `@typescript-eslint/restrict-plus-operands` forces to cast members of an operation both to string | number.
-- `@typescript-eslint/restrict-template-expressions` forces to define a variable used inside a template literal into string/number.
-- `@typescript-eslint/no-floating-promises` forces to have a `catch` in promises.
-- `@typescript-eslint/no-var-requires` forces again to not use `require`.
-- `@typescript-eslint/ban-types`, forbid usage of `String`, `Number` (in favor of `string`, `number`) and `{}`/`object` for types (in favor of `Record` type utility)
-
 # Publish new version
 
-Just merge to `main` branch and then pull and run:
+Just merge to `main` branch and run:
 
+- `git checkout main`
+- `git pull`
+- `yarn`
 - `yarn publish:(major|minor|patch)`
 - `git push --tags`
 
