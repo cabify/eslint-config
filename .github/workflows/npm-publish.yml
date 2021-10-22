@@ -6,6 +6,9 @@ name: Publish package
 on:
   workflow_run:
     workflows: ['Tests']
+    branches: [main]
+    types:
+      - completed
   push:
     branches:
       - '!*'
