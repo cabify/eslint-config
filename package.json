@@ -17,7 +17,7 @@
   "repository": "github:cabify/eslint-config",
   "homepage": "https://github.com/cabify/eslint-config#readme",
   "bugs": {
-    "url" : "https://github.com/cabify/eslint-config/issues"
+    "url": "https://github.com/cabify/eslint-config/issues"
   },
   "keywords": [
     "javascript",
