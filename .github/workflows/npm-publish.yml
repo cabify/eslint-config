@@ -5,10 +5,10 @@ name: Publish package
 
 on:
   workflow_run:
-    workflows: ["Tests"]
+    workflows: ['Tests']
   push:
     branches:
-      - "!*"
+      - '!*'
     tags:
       - 'v*'
 
