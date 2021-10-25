@@ -1,6 +1,6 @@
 # @cabify/eslint-config
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-10-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-11-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ESLint config for both TS and JS, Cabify way.
@@ -260,6 +260,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/christiandebarrio"><img src="https://avatars.githubusercontent.com/u/13832650?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Christian</b></sub></a><br /><a href="https://github.com/cabify/eslint-config/commits?author=christiandebarrio" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/Crismmgg"><img src="https://avatars.githubusercontent.com/u/56558107?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Crismmgg</b></sub></a><br /><a href="https://github.com/cabify/eslint-config/commits?author=Crismmgg" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/d-asensio"><img src="https://avatars.githubusercontent.com/u/13970905?v=4?s=100" width="100px;" alt=""/><br /><sub><b>David Asensio Cañas</b></sub></a><br /><a href="https://github.com/cabify/eslint-config/commits?author=d-asensio" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/inspiratweb"><img src="https://avatars.githubusercontent.com/u/6814061?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Francisco Sánchez</b></sub></a><br /><a href="https://github.com/cabify/eslint-config/commits?author=inspiratweb" title="Code">💻</a></td>
   </tr>
 </table>
 
