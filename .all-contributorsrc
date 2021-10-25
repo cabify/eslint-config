@@ -153,6 +153,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "humanrender",
+      "name": "Sergio Ramirez",
+      "avatar_url": "https://avatars.githubusercontent.com/u/161557?v=4",
+      "profile": "https://github.com/humanrender",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7
