@@ -1,6 +1,6 @@
 # @cabify/eslint-config
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-13-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-14-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ESLint config for both TS and JS, Cabify way.
@@ -263,6 +263,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/inspiratweb"><img src="https://avatars.githubusercontent.com/u/6814061?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Francisco Sánchez</b></sub></a><br /><a href="https://github.com/cabify/eslint-config/commits?author=inspiratweb" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/jalopez"><img src="https://avatars.githubusercontent.com/u/259623?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Javier López</b></sub></a><br /><a href="https://github.com/cabify/eslint-config/commits?author=jalopez" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/jmmerino"><img src="https://avatars.githubusercontent.com/u/1152640?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jesús Merino Parra</b></sub></a><br /><a href="https://github.com/cabify/eslint-config/commits?author=jmmerino" title="Code">💻</a></td>
+    <td align="center"><a href="https://leireriel.github.io/leire-rico-portfolio/#/"><img src="https://avatars.githubusercontent.com/u/48056077?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Leire Rico</b></sub></a><br /><a href="https://github.com/cabify/eslint-config/commits?author=leireriel" title="Code">💻</a></td>
   </tr>
 </table>
 
