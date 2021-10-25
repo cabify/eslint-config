@@ -1,6 +1,6 @@
 # @cabify/eslint-config
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ESLint config for both TS and JS, Cabify way.
@@ -250,6 +250,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://aarongarciah.com/"><img src="https://avatars.githubusercontent.com/u/7225802?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Aarón García Hervás</b></sub></a><br /><a href="https://github.com/cabify/eslint-config/commits?author=aarongarciah" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/alejandrofdiaz"><img src="https://avatars.githubusercontent.com/u/9197247?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Alejandro</b></sub></a><br /><a href="https://github.com/cabify/eslint-config/commits?author=alejandrofdiaz" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/alexgallardo"><img src="https://avatars.githubusercontent.com/u/7766614?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Alejandro Gallardo Escobar</b></sub></a><br /><a href="https://github.com/cabify/eslint-config/commits?author=alexgallardo" title="Code">💻</a></td>
   </tr>
 </table>
 
