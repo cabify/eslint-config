@@ -196,42 +196,42 @@ This will trigger a workflow on Github which will publish to npm eventually.
 
 # Former contributors
 
-Aarón García (aarongarciah)
+Aarón García
 
-Alejandro Frías (alejandrofdiaz)
+Alejandro Frías
 
-Alejandro Gallardo Escobar (alexgallardo)
+Alejandro Gallardo Escobar
 
-alejandro Leon (cicloon)
+alejandro Leon
 
-Alejandro Molero ()
+Alejandro Molero
 
-Alejandro Ruiz Temina (AlexTemina-Sopra)
+Alejandro Ruiz Temina
 
-Arián Zargarán Florez (ArianZargaran)
+Arián Zargarán Florez
 
-Carlos Castillo Alarcón (carloscasalar)
+Carlos Castillo Alarcón
 
-Christian de Barrio Arribas (christiandebarrio)
+Christian de Barrio Arribas
 
-Cristina Martín Gago ()
+Cristina Martín Gago
 
-David Asensio Cañas (d-asensio)
+David Asensio Cañas
 
-Francisco Sanchez (inspiratweb)
+Francisco Sanchez
 
-Javier López Pardo (jalopez)
+Javier López Pardo
 
-Jesus Merino (jmmerino)
+Jesus Merino
 
-Leire Rico Prieto (leireriel)
+Leire Rico Prieto
 
-Ricardo Boluda Hernández (riboher)
+Ricardo Boluda Hernández
 
-Rodrigo Erades Alonso (area73)
+Rodrigo Erades Alonso
 
-sergio ramirez (humanrender)
+sergio ramirez
 
-Valentin Berlin (valenber)
+Valentin Berlin
 
-Yago Quiñoy Lobariñas (YagoQuinoy)
+Yago Quiñoy Lobariñas
