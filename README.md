@@ -1,6 +1,9 @@
 # @cabify/eslint-config
+
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+
 [![All Contributors](https://img.shields.io/badge/all_contributors-20-orange.svg?style=flat-square)](#contributors-)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ESLint config for both TS and JS, Cabify way.
@@ -196,48 +199,6 @@ Just merge to `main` branch and run:
 - `git push --tags`
 
 This will trigger a workflow on Github which will publish to npm eventually.
-
-# Former contributors
-
-Aarón García
-
-Alejandro Frías
-
-Alejandro Gallardo Escobar
-
-alejandro Leon
-
-Alejandro Molero
-
-Alejandro Ruiz Temina
-
-Arián Zargarán Florez
-
-Carlos Castillo Alarcón
-
-Christian de Barrio Arribas
-
-Cristina Martín Gago
-
-David Asensio Cañas
-
-Francisco Sanchez
-
-Javier López Pardo
-
-Jesus Merino
-
-Leire Rico Prieto
-
-Ricardo Boluda Hernández
-
-Rodrigo Erades Alonso
-
-sergio ramirez
-
-Valentin Berlin
-
-Yago Quiñoy Lobariñas
 
 ## Contributors ✨
 
