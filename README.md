@@ -177,7 +177,7 @@ or
 yarn add --dev eslint-import-resolver-jest
 ```
 
-### Legacy
+## Legacy
 
 If you want to maintain the formatting within ESLint, you can opt to extend the `@cabify/eslint-config/legacy` configuration instead of `@cabify/eslint-config/recommended`:
 
@@ -188,7 +188,7 @@ If you want to maintain the formatting within ESLint, you can opt to extend the 
 }
 ```
 
-# Publish new version
+## Publish new version
 
 Just merge to `main` branch and run:
 
