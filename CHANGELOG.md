@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.0] - 2021-10-27
+
 ### Changed
 
 - ESLint v8 is now required as a peer dependency.
