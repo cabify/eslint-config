@@ -169,6 +169,8 @@ some rules. If you can live without them, just make these changes in your `.esli
 
 If you use Jest, installing its import resolver into your project is encouraged.
 
+1.  Install the following dependencies:
+
 ```sh
 npm i -D eslint-import-resolver-jest
 ```
@@ -178,6 +180,42 @@ or
 ```sh
 yarn add --dev eslint-import-resolver-jest
 ```
+
+2. Modify `.eslintrc`:
+
+```json
+{
+  ...
+  "settings": {
+    ...
+    "import/resolver": {
+      ...
+      "jest": {
+      "jestConfigFile": "./jest.config.js"
+      }
+    }
+  }
+}
+```
+
+If you want to ensure that this resolver only applies to your test files, you can use ESLint's overrides configuration option:
+
+```json
+"overrides": [
+  {
+    "files": ["**/__tests__/**/*.js"],
+    "settings": {
+      "import/resolver": {
+        "jest": {
+          "jestConfigFile": "./jest.config.js"
+        }
+      }
+    }
+  }
+]
+```
+
+3. Make sure that you have set up your jest config file (e.g., `./jest.config.js` )
 
 ## Legacy
 
