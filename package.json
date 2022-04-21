@@ -8,10 +8,12 @@
     "lint:check": "eslint .",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
+    "typecheck": "echo 'No typecheck to perform'",
+    "test:ci": "echo 'No test to perform'",
     "publish:major": "npm version major",
     "publish:minor": "npm version minor",
     "publish:patch": "npm version patch",
-    "publish:canary": "npm version prerelease"
+    "publish:canary": "npm version prerelease --preid=beta"
   },
   "license": "Apache-2.0",
   "repository": "github:cabify/eslint-config",
