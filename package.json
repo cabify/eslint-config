@@ -3,6 +3,7 @@
   "version": "1.0.3",
   "description": "ESLint config for Cabify Javascript projects",
   "scripts": {
+    "build": "echo 'No build to perform'",
     "test": "npm run lint:check && npm run format:check",
     "lint": "eslint . --fix",
     "lint:check": "eslint .",
