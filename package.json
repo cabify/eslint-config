@@ -40,7 +40,7 @@
     "./recommended": "./recommended.js"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.47.0",
+    "@typescript-eslint/eslint-plugin": "^5.47.1",
     "@typescript-eslint/parser": "^5.47.0",
     "confusing-browser-globals": "^1.0.10",
     "eslint-config-prettier": "^8.3.0",
