@@ -41,7 +41,7 @@
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^5.48.1",
-    "@typescript-eslint/parser": "^5.48.1",
+    "@typescript-eslint/parser": "^5.48.2",
     "confusing-browser-globals": "^1.0.10",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-import": "^2.27.4",
