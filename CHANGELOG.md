@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- Breaking change in how type imports are sorted [eslint-plugin-simple-import-sort@10.0.0](https://github.com/lydell/eslint-plugin-simple-import-sort/blob/main/CHANGELOG.md#version-1000-2023-01-27)
+
 ## [1.1.2] - 2022-10-24
 
 ### Changed
