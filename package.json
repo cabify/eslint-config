@@ -58,7 +58,7 @@
     "prettier": ">= 2.2.1"
   },
   "devDependencies": {
-    "prettier": "2.8.3",
+    "prettier": "2.8.4",
     "eslint": "8.33.0"
   },
   "publishConfig": {
