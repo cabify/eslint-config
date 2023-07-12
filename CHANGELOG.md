@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.1] - 2023-07-12
+
+- Bumped prettier to v3 and eslint-plugin-prettier to v5 because of [compatibility issues between them](https://github.com/prettier/eslint-plugin-prettier/issues/562).
+
 ## [2.0.0] - 2023-06-19
 
 ### Changed
