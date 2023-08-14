@@ -18,4 +18,3 @@ updates:
       typescript-eslint:
         patterns:
           - '@typescript-eslint/*'
-
