@@ -14,3 +14,8 @@ updates:
       eslint:
         patterns:
           - 'eslint'
+          - 'eslint-plugin-*'
+      typescript-eslint:
+        patterns:
+          - '@typescript-eslint/*'
+
