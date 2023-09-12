@@ -59,13 +59,13 @@
   },
   "devDependencies": {
     "eslint": "8.49.0",
-    "prettier": "3.0.2"
+    "prettier": "3.0.3"
   },
   "publishConfig": {
     "access": "public"
   },
   "volta": {
-    "node": "14.18.1",
+    "node": "18.17.1",
     "yarn": "1.22.17"
   }
 }
