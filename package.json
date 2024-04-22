@@ -33,11 +33,9 @@
     "style",
     "standards"
   ],
-  "main": "./legacy.js",
+  "main": "../recommended.js",
   "exports": {
-    ".": "./legacy.js",
-    "./legacy": "./legacy.js",
-    "./recommended": "./recommended.js"
+    ".": "./recommended.js"
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^7.7.0",

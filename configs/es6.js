@@ -1,13 +1,15 @@
 module.exports = {
-  env: {
-    es6: true,
-  },
-  parserOptions: {
+  languageOptions: {
+    globals: {
+      es6: true,
+    },
     ecmaVersion: 6,
     sourceType: 'module',
-    ecmaFeatures: {
-      generators: false,
-      objectLiteralDuplicateProperties: false,
+    parserOptions: {
+      ecmaFeatures: {
+        generators: false,
+        objectLiteralDuplicateProperties: false,
+      },
     },
   },
 
