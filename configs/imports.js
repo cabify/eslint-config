@@ -1,9 +1,16 @@
-module.exports = {
-  env: {
-    es6: true,
-  },
-  plugins: ['import', 'simple-import-sort'],
+const importPlugin = require('eslint-plugin-import');
+const simpleImportSort = require('eslint-plugin-simple-import-sort');
 
+module.exports = {
+  languageOptions: {
+    globals: {
+      es6: true,
+    },
+  },
+  plugins: {
+    import: importPlugin,
+    'simple-import-sort': simpleImportSort,
+  },
   settings: {
     'import/resolver': {
       node: {

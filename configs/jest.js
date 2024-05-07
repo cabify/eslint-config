@@ -1,5 +1,13 @@
+const jest = require('eslint-plugin-jest');
+
 module.exports = {
-  env: { 'jest/globals': true },
-  plugins: ['jest'],
-  extends: ['plugin:jest/recommended', 'plugin:jest/style'],
+  languageOptions: {
+    globals: {
+      'jest/globals': true,
+    },
+  },
+  rules: {
+    ...jest.configs['flat/recommended'],
+    ...jest.configs['flat/styles'],
+  },
 };
