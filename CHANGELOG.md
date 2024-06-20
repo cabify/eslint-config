@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [2.1.0] - 2024-06-20
 
-- Updating dependencies.
+- Updating dependencies before migration to ESlint 9.
 
 ## [2.0.1] - 2023-07-12
 
