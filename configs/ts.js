@@ -21,7 +21,7 @@ module.exports = {
       },
       {
         selector: 'import',
-        format: ['camelCase', 'PascalCase'],
+        format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
       },
       {
         // This is the 'property' group values. For some reason `property` selector is not recogniced.
