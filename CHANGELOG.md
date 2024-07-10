@@ -9,8 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [2.1.1] - 2024-07-10
 
-- Updating naming convention for imports. Added `camelCase`, `PascalCase` and `UPPER_CASE`
-  
+- Updating naming convention for imports. Added `camelCase`, `PascalCase` and `UPPER_CASE`.
+
 ## [2.1.0] - 2024-06-20
 
 - Updating dependencies before migration to ESlint 9.
