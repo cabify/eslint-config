@@ -20,6 +20,10 @@ module.exports = {
         format: ['camelCase'],
       },
       {
+        selector: 'import',
+        format: ['camelCase', 'PascalCase'],
+      },      
+      {
         // This is the 'property' group values. For some reason `property` selector is not recogniced.
         selector: ['classProperty', 'objectLiteralProperty', 'typeProperty'],
         format: null,
