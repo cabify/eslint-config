@@ -1,6 +1,6 @@
 {
   "name": "@cabify/eslint-config",
-  "version": "2.1.1",
+  "version": "2.1.2-beta",
   "description": "ESLint config for Cabify Javascript projects",
   "scripts": {
     "build": "echo 'No build to perform'",
