@@ -1,6 +1,6 @@
 {
   "name": "@cabify/eslint-config",
-  "version": "2.0.1",
+  "version": "2.1.1",
   "description": "ESLint config for Cabify Javascript projects",
   "scripts": {
     "build": "echo 'No build to perform'",
@@ -38,8 +38,8 @@
     ".": "./recommended.js"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^7.7.0",
-    "@typescript-eslint/parser": "^7.7.0",
+    "@typescript-eslint/eslint-plugin": "^8.4.0",
+    "@typescript-eslint/parser": "^8.4.0",
     "confusing-browser-globals": "^1.0.10",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.30.0",
@@ -58,13 +58,13 @@
   },
   "devDependencies": {
     "eslint": "9.1.0",
-    "prettier": "3.2.5"
+    "prettier": "3.3.3"
   },
   "publishConfig": {
     "access": "public"
   },
   "volta": {
-    "node": "18.17.1",
+    "node": "20.14.0",
     "yarn": "1.22.17"
   }
 }
