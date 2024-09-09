@@ -1,3 +1,5 @@
+const globals = require('globals');
+
 const { isPackageAvailable } = require('../utils');
 
 const isTSAvailable = isPackageAvailable('typescript');
@@ -25,13 +27,13 @@ const configs = [
   bestPractices,
   errors,
   es6,
-  // imports, WE can't use this config since this plugin does not support es-lint v9 https://github.com/import-js/eslint-plugin-import/issues/2948
+  imports,
   node,
   promises,
   strict,
   style,
   variables,
-  //react, WE can't use this config since this plugin does not support es-lint v9 https://github.com/jsx-eslint/eslint-plugin-react/issues/3699
+  react,
   lodash,
   reactA11y,
   isJestAvailable && jest,
@@ -57,12 +59,12 @@ module.exports = [
   ...configs,
   {
     languageOptions: {
-      globals: {
-        browser: true,
-        node: true,
-      },
-      ecmaVersion: 2018,
+      ecmaVersion: 2022,
       sourceType: 'module',
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+      },
     },
     rules: {
       strict: 'error',

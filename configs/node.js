@@ -1,10 +1,4 @@
 module.exports = {
-  languageOptions: {
-    globals: {
-      node: true,
-    },
-  },
-
   rules: {
     // enforce return after a callback
     'callback-return': 'off',
