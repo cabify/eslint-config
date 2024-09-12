@@ -7,9 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [2.1.4] - 2024-09-12
-
 - Fixing dependencies not published properly in `v2.1.3`.
+- Revert eslint-plugin-lodash version bump because it requires ESLint v9.
 
 ## [2.1.3] - 2024-09-12
 
