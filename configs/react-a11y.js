@@ -3,13 +3,13 @@ const jsxAllyPlugin = require('eslint-plugin-jsx-a11y');
 module.exports = {
   plugins: { 'jsx-a11y': jsxAllyPlugin },
 
-  languageOptions: {
-    parserOptions: {
-      ecmaFeatures: {
-        jsx: true,
-      },
-    },
-  },
+  // languageOptions: {
+  //   parserOptions: {
+  //     ecmaFeatures: {
+  //       jsx: true,
+  //     },
+  //   },
+  // },
 
   rules: {
     // Enforce that anchors have content

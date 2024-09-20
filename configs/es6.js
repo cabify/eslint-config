@@ -1,17 +1,17 @@
 module.exports = {
-  languageOptions: {
-    globals: {
-      es6: true,
-    },
-    ecmaVersion: 6,
-    sourceType: 'module',
-    parserOptions: {
-      ecmaFeatures: {
-        generators: false,
-        objectLiteralDuplicateProperties: false,
-      },
-    },
-  },
+  // languageOptions: {
+  //   globals: {
+  //     es6: true,
+  //   },
+  //   ecmaVersion: 6,
+  //   sourceType: 'module',
+  //   parserOptions: {
+  //     ecmaFeatures: {
+  //       generators: false,
+  //       objectLiteralDuplicateProperties: false,
+  //     },
+  //   },
+  // },
 
   rules: {
     // verify super() callings in constructors

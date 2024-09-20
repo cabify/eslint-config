@@ -22,6 +22,7 @@ const react = require('./react');
 const lodash = require('./lodash');
 const reactA11y = require('./react-a11y');
 const jest = require('./jest');
+const formats = require('./formats');
 
 const configs = [
   bestPractices,
@@ -36,6 +37,7 @@ const configs = [
   react,
   lodash,
   reactA11y,
+  formats,
   isJestAvailable && jest,
 ].filter(Boolean);
 
