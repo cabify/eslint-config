@@ -2,6 +2,7 @@ const importPlugin = require('eslint-plugin-import');
 const simpleImportSort = require('eslint-plugin-simple-import-sort');
 
 module.exports = {
+  name: 'imports-cabify-eslint-config',
   // languageOptions: {
   //   globals: {
   //     es6: true,

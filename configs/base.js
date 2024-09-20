@@ -60,6 +60,7 @@ const overrides = [
 module.exports = [
   ...configs,
   {
+    name: 'base-cabify-eslint-config',
     languageOptions: {
       ecmaVersion: 2022,
       sourceType: 'module',

@@ -1,6 +1,7 @@
 const jsxAllyPlugin = require('eslint-plugin-jsx-a11y');
 
 module.exports = {
+  name: 'react-a11y-cabify-eslint-config',
   plugins: { 'jsx-a11y': jsxAllyPlugin },
 
   // languageOptions: {

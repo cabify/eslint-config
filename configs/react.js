@@ -2,6 +2,7 @@ const react = require('eslint-plugin-react');
 const reactHooks = require('eslint-plugin-react-hooks');
 
 module.exports = {
+  name: 'react-cabify-eslint-config',
   plugins: {
     react,
     'react-hooks': reactHooks,

@@ -1,4 +1,5 @@
 module.exports = {
+  name: 'ts-cabify-eslint-config',
   plugins: ['@typescript-eslint'],
   extends: [
     'plugin:@typescript-eslint/recommended',

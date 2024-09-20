@@ -1,4 +1,5 @@
 module.exports = {
+  name: 'ES6-cabify-eslint-config',
   // languageOptions: {
   //   globals: {
   //     es6: true,

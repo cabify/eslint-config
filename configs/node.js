@@ -1,4 +1,5 @@
 module.exports = {
+  name: 'node-cabify-eslint-config',
   rules: {
     // enforce return after a callback
     'callback-return': 'off',

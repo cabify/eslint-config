@@ -1,4 +1,5 @@
 module.exports = {
+  name: 'errors-cabify-eslint-config',
   rules: {
     // Enforce “for” loop update clause moving the counter in the right direction
     // https://eslint.org/docs/rules/for-direction
