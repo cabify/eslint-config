@@ -1,6 +1,6 @@
 {
   "name": "@cabify/eslint-config",
-  "version": "2.1.4",
+  "version": "3.0.1-beta-6",
   "description": "ESLint config for Cabify Javascript projects",
   "scripts": {
     "build": "echo 'No build to perform'",
@@ -33,11 +33,9 @@
     "style",
     "standards"
   ],
-  "main": "./legacy.js",
+  "main": "../recommended.js",
   "exports": {
-    ".": "./legacy.js",
-    "./legacy": "./legacy.js",
-    "./recommended": "./recommended.js"
+    ".": "./recommended.js"
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^8.7.0",
@@ -51,14 +49,15 @@
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-react": "^7.36.0",
     "eslint-plugin-react-hooks": "^4.6.2",
-    "eslint-plugin-simple-import-sort": "^12.1.1"
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "globals": "^15.9.0"
   },
   "peerDependencies": {
-    "eslint": ">= 8.0.1",
+    "eslint": "9.11.0",
     "prettier": ">= 2.2.1"
   },
   "devDependencies": {
-    "eslint": "8.57.0",
+    "eslint": "9.11.0",
     "prettier": "3.3.3"
   },
   "publishConfig": {

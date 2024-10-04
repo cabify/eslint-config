@@ -1,4 +1,5 @@
 module.exports = {
+  name: 'promises-cabify-eslint-config',
   rules: {
     'no-floating-promises': 'off',
 

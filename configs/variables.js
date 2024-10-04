@@ -1,6 +1,7 @@
 const confusingBrowserGlobals = require('confusing-browser-globals');
 
 module.exports = {
+  name: 'variables-cabify-eslint-config',
   rules: {
     // enforce or disallow variable initializations at definition
     'init-declarations': 'off',
