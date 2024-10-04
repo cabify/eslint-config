@@ -44,7 +44,6 @@ const configs = [
 const overrides = [
   isTSAvailable && {
     files: ['**/*.ts', '**/*.tsx'],
-    excludedFiles: '*.d.ts',
     ...ts,
   },
   {

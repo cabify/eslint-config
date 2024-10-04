@@ -136,4 +136,9 @@ module.exports = {
     'no-redeclare': 'off', // superseeded by @typescript-eslint/no-redeclare
     'no-shadow': 'off', // superseeded by @typescript-eslint/no-shadow
   },
+  overrides: [
+    {
+      excludedFiles: '*.d.ts',
+    },
+  ],
 };
