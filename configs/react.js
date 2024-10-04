@@ -1,7 +1,7 @@
-const react = require('eslint-plugin-react');
-const reactHooks = require('eslint-plugin-react-hooks');
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
 
-module.exports = {
+export default {
   name: 'react-cabify-eslint-config',
   plugins: {
     react,

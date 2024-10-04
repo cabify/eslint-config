@@ -1,3 +1,4 @@
-const recommended = require('./recommended');
+// eslint-disable-next-line import/extensions
+import recommended from './recommended.js';
 
-module.exports = [...recommended];
+export default [...recommended];

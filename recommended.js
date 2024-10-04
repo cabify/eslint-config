@@ -1,4 +1,6 @@
-const base = require('./configs/base');
-const eslintConfigPrettier = require('eslint-config-prettier');
+import eslintConfigPrettier from 'eslint-config-prettier';
 
-module.exports = [...base, eslintConfigPrettier];
+// eslint-disable-next-line import/extensions
+import base from './configs/base.js';
+
+export default [...base, eslintConfigPrettier];

@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: 'ES6-cabify-eslint-config',
   // languageOptions: {
   //   globals: {

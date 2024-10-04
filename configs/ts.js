@@ -1,10 +1,9 @@
-module.exports = {
+// eslint-disable-next-line import/no-unresolved
+import tseslint from 'typescript-eslint';
+
+export default {
   name: 'ts-cabify-eslint-config',
-  plugins: ['@typescript-eslint'],
-  extends: [
-    'plugin:@typescript-eslint/recommended',
-    'plugin:@typescript-eslint/recommended-requiring-type-checking',
-  ],
+  ...tseslint.configs.recommended,
   rules: {
     '@typescript-eslint/restrict-template-expressions': [
       'error',

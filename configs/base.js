@@ -1,28 +1,27 @@
-const globals = require('globals');
+/* eslint-disable import/extensions */
+import globals from 'globals';
 
-const { isPackageAvailable } = require('../utils');
+import { isPackageAvailable } from '../utils.js';
+import bestPractices from './best-practices.js';
+import errors from './errors.js';
+import es6 from './es6.js';
+import formats from './formats.js';
+import imports from './imports.js';
+import jest from './jest.js';
+import lodash from './lodash.js';
+import node from './node.js';
+import postcss from './postcss.js';
+import promises from './promises.js';
+import react from './react.js';
+import reactA11y from './react-a11y.js';
+import storybook from './storybook.js';
+import strict from './strict.js';
+import style from './style.js';
+import ts from './ts.js';
+import variables from './variables.js';
 
-const isTSAvailable = isPackageAvailable('typescript');
-const isJestAvailable = isPackageAvailable('jest');
-
-const storybook = require('./storybook');
-const ts = require('./ts');
-const postcss = require('./postcss');
-
-const bestPractices = require('./best-practices');
-const errors = require('./errors');
-const es6 = require('./es6');
-const imports = require('./imports');
-const node = require('./node');
-const promises = require('./promises');
-const strict = require('./strict');
-const style = require('./style');
-const variables = require('./variables');
-const react = require('./react');
-const lodash = require('./lodash');
-const reactA11y = require('./react-a11y');
-const jest = require('./jest');
-const formats = require('./formats');
+const isTSAvailable = await isPackageAvailable('typescript');
+const isJestAvailable = await isPackageAvailable('jest');
 
 const configs = [
   bestPractices,
@@ -56,7 +55,7 @@ const overrides = [
   },
 ].filter(Boolean);
 
-module.exports = [
+export default [
   ...configs,
   {
     name: 'base-cabify-eslint-config',

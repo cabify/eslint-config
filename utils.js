@@ -1,11 +1,11 @@
-module.exports = {
-  isPackageAvailable(packageName) {
-    try {
-      // eslint-disable-next-line global-require, import/no-dynamic-require
-      return !!require(packageName);
-      // eslint-disable-next-line no-unused-vars
-    } catch (e) {
-      return false;
-    }
-  },
-};
+/* eslint-disable no-unused-vars */
+// eslint-disable-next-line import/prefer-default-export
+export async function isPackageAvailable(packageName) {
+  try {
+    // Dynamically import the package
+    await import(packageName);
+    return true;
+  } catch (_) {
+    return false;
+  }
+}

@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: 'node-cabify-eslint-config',
   rules: {
     // enforce return after a callback

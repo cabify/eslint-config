@@ -2,6 +2,7 @@
   "name": "@cabify/eslint-config",
   "version": "3.0.1-beta-6",
   "description": "ESLint config for Cabify Javascript projects",
+  "type": "module",
   "scripts": {
     "build": "echo 'No build to perform'",
     "test": "npm run lint:check && npm run format:check",
@@ -38,6 +39,7 @@
     ".": "./recommended.js"
   },
   "dependencies": {
+    "typescript-eslint": "^8.8.0",
     "@typescript-eslint/eslint-plugin": "^8.4.0",
     "@typescript-eslint/parser": "^8.4.0",
     "confusing-browser-globals": "^1.0.10",
@@ -57,8 +59,11 @@
     "prettier": ">= 2.2.1"
   },
   "devDependencies": {
-    "eslint": "9.11.0",
-    "prettier": "3.3.3"
+    "@eslint/js": "^9.11.1",
+    "@types/eslint__js": "^8.42.3",
+    "eslint": "^9.11.1",
+    "prettier": "3.3.3",
+    "typescript": "^5.6.2"
   },
   "publishConfig": {
     "access": "public"
