@@ -2,13 +2,8 @@ const jest = require('eslint-plugin-jest');
 
 module.exports = {
   name: 'jest-cabify-eslint-config',
-  // languageOptions: {
-  //   globals: {
-  //     'jest/globals': true,
-  //   },
-  // },
+  ...jest.recommended,
   rules: {
-    ...jest.configs['flat/recommended'],
-    ...jest.configs['flat/styles'],
+    ...jest.configs['flat/recommended'].rules,
   },
 };
