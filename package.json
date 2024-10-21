@@ -44,13 +44,13 @@
     "@typescript-eslint/parser": "^8.10.0",
     "confusing-browser-globals": "^1.0.10",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-import": "^2.30.0",
+    "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-jest": "^28.8.3",
-    "eslint-plugin-jsx-a11y": "^6.10.0",
-    "eslint-plugin-lodash": "^7.4.0",
+    "eslint-plugin-jsx-a11y": "^6.10.1",
+    "eslint-plugin-lodash": "^8.0.0",
     "eslint-plugin-prettier": "^5.2.1",
-    "eslint-plugin-react": "^7.36.0",
-    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react": "^7.37.1",
+    "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-simple-import-sort": "^12.1.1"
   },
   "peerDependencies": {
@@ -58,7 +58,7 @@
     "prettier": ">= 2.2.1"
   },
   "devDependencies": {
-    "eslint": "8.57.0",
+    "eslint": "9.13.0",
     "prettier": "3.3.3"
   },
   "publishConfig": {
