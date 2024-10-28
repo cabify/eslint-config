@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   name: 'strict-cabify-eslint-config',
   rules: {
     // babel inserts `'use strict';` for us

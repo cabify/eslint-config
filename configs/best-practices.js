@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   name: 'best-practices-cabify-eslint-config',
   rules: {
     // enforces getter/setter pairs in objects

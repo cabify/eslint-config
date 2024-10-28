@@ -1,6 +1,6 @@
-import jest from 'eslint-plugin-jest';
+const jest = require('eslint-plugin-jest');
 
-export default {
+module.exports = {
   name: 'jest-cabify-eslint-config',
   ...jest.configs['flat/recommended'],
   rules: {

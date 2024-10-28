@@ -1,6 +1,6 @@
 /* eslint-disable import/no-unresolved */
 /* eslint-disable no-param-reassign */
-import tseslint from 'typescript-eslint';
+const tseslint = require('typescript-eslint');
 
 const tsCustomConfig = {
   name: 'ts-cabify-eslint-config',
@@ -139,7 +139,7 @@ const tsCustomConfig = {
   languageOptions: {
     parserOptions: {
       projectService: true,
-      tsconfigRootDir: import.meta.dirname,
+      //tsconfigRootDir: import.meta.dirname,
     },
   },
   ignores: ['*.d.ts'],
@@ -158,4 +158,5 @@ if (tsLintConfig.length) {
   });
 }
 
-export default tsLintConfig;
+//export default tsLintConfig;
+module.exports = tsLintConfig;

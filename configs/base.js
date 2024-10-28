@@ -1,30 +1,33 @@
 /* eslint-disable import/extensions */
-import globals from 'globals';
+const globals = require('globals');
 
-import { isPackageAvailable } from '../utils.js';
-import bestPractices from './best-practices.js';
-import errors from './errors.js';
-import es6 from './es6.js';
-import formats from './formats.js';
-import imports from './imports.js';
-import jest from './jest.js';
-import lodash from './lodash.js';
-import node from './node.js';
-import postcss from './postcss.js';
-import promises from './promises.js';
-import react from './react.js';
-import reactA11y from './react-a11y.js';
-import storybook from './storybook.js';
-import strict from './strict.js';
-import style from './style.js';
-import variables from './variables.js';
+const { isPackageAvailable } = require('../utils');
+const bestPractices = require('./best-practices.js');
+const errors = require('./errors.js');
+const es6 = require('./es6.js');
+const formats = require('./formats.js');
+const imports = require('./imports.js');
+const jest = require('./jest.js');
+const lodash = require('./lodash.js');
+const node = require('./node.js');
+const postcss = require('./postcss.js');
+const promises = require('./promises.js');
+const react = require('./react.js');
+const reactA11y = require('./react-a11y.js');
+const storybook = require('./storybook.js');
+const strict = require('./strict.js');
+const style = require('./style.js');
+const variables = require('./variables.js');
 
-const isTSAvailable = await isPackageAvailable('typescript');
+const isTSAvailable = isPackageAvailable('typescript');
+
+console.log('isTSAvailable', isTSAvailable);
+const tsCustomConfigs = require('./ts.js');
 let tsConfigs = [];
 if (isTSAvailable) {
-  tsConfigs = await import('./ts.js');
+  tsConfigs = tsCustomConfigs;
 }
-const isJestAvailable = await isPackageAvailable('jest');
+const isJestAvailable = isPackageAvailable('jest');
 
 const configs = [
   bestPractices,
@@ -54,7 +57,7 @@ const overrides = [
   },
 ].filter(Boolean);
 
-export default [
+module.exports = [
   ...configs,
   {
     name: 'base-cabify-eslint-config',

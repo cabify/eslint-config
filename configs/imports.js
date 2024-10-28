@@ -1,8 +1,8 @@
-import importPlugin from 'eslint-plugin-import';
-import simpleImportSort from 'eslint-plugin-simple-import-sort';
-import globals from 'globals';
+const importPlugin = require('eslint-plugin-import');
+const simpleImportSort = require('eslint-plugin-simple-import-sort');
+const globals = require('globals');
 
-export default {
+module.exports = {
   name: 'imports-cabify-eslint-config',
   languageOptions: {
     globals: {

@@ -1,6 +1,6 @@
-import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
+const eslintPluginPrettierRecommended = require('eslint-plugin-prettier/recommended');
 
-export default {
+module.exports = {
   name: 'formats-cabify-eslint-config',
   ...eslintPluginPrettierRecommended,
 };

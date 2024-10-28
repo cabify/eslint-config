@@ -1,6 +1,6 @@
-import jsxAllyPlugin from 'eslint-plugin-jsx-a11y';
+const jsxAllyPlugin = require('eslint-plugin-jsx-a11y');
 
-export default {
+module.exports = {
   name: 'react-a11y-cabify-eslint-config',
   plugins: { 'jsx-a11y': jsxAllyPlugin },
   languageOptions: {

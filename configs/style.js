@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   name: 'style-cabify-eslint-config',
   rules: {
     // require camel case names

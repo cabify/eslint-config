@@ -1,6 +1,6 @@
-import lodashPlugin from 'eslint-plugin-lodash';
+const lodashPlugin = require('eslint-plugin-lodash');
 
-export default {
+module.exports = {
   name: 'lodash-cabify-eslint-config',
   plugins: { lodash: lodashPlugin },
   rules: {

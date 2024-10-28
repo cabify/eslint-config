@@ -1,6 +1,6 @@
-import globals from 'globals';
+const globals = require('globals');
 
-export default {
+module.exports = {
   name: 'ES6-cabify-eslint-config',
   languageOptions: {
     ecmaVersion: 6,

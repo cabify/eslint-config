@@ -2,7 +2,6 @@
   "name": "@cabify/eslint-config",
   "version": "3.0.1-beta-8",
   "description": "ESLint config for Cabify Javascript projects",
-  "type": "module",
   "scripts": {
     "build": "echo 'No build to perform'",
     "test": "npm run lint:check && npm run format:check",
