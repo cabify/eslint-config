@@ -1,9 +1,6 @@
-// eslint-disable-next-line import/no-unresolved
-import tseslint from 'typescript-eslint';
-
 export default {
   name: 'ts-cabify-eslint-config',
-  ...tseslint.configs.recommended,
+  files: ['**/*.ts', '**/*.tsx'],
   rules: {
     '@typescript-eslint/restrict-template-expressions': [
       'error',
@@ -135,9 +132,11 @@ export default {
     'no-redeclare': 'off', // superseeded by @typescript-eslint/no-redeclare
     'no-shadow': 'off', // superseeded by @typescript-eslint/no-shadow
   },
-  overrides: [
-    {
-      excludedFiles: '*.d.ts',
+  languageOptions: {
+    parserOptions: {
+      projectService: true,
+      tsconfigRootDir: import.meta.dirname,
     },
-  ],
+  },
+  ignores: ['*.d.ts'],
 };

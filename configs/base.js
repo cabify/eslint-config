@@ -1,6 +1,8 @@
+/* eslint-disable no-param-reassign */
 /* eslint-disable import/extensions */
 import globals from 'globals';
 
+// import tseslint from 'typescript-eslint';
 import { isPackageAvailable } from '../utils.js';
 import bestPractices from './best-practices.js';
 import errors from './errors.js';
@@ -21,6 +23,13 @@ import ts from './ts.js';
 import variables from './variables.js';
 
 const isTSAvailable = await isPackageAvailable('typescript');
+let tseslint;
+
+if (isTSAvailable) {
+  // eslint-disable-next-line import/no-unresolved
+  tseslint = await import('typescript-eslint');
+}
+
 const isJestAvailable = await isPackageAvailable('jest');
 
 const configs = [
@@ -41,10 +50,6 @@ const configs = [
 ].filter(Boolean);
 
 const overrides = [
-  isTSAvailable && {
-    files: ['**/*.ts', '**/*.tsx'],
-    ...ts,
-  },
   {
     files: ['*.story.tsx', '*.stories.tsx'],
     ...storybook,
@@ -54,6 +59,21 @@ const overrides = [
     ...postcss,
   },
 ].filter(Boolean);
+
+const tsConfigs = isTSAvailable
+  ? tseslint.config(
+      ...tseslint.configs.recommended,
+      ...tseslint.configs.recommendedTypeChecked,
+      { ...ts },
+    )
+  : [];
+
+if (tsConfigs.length) {
+  tsConfigs.forEach((tsconfig) => {
+    tsconfig.files = ['**/*.ts', '**/*.tsx'];
+    tsconfig.ignores = ['**/*.d.ts'];
+  });
+}
 
 export default [
   ...configs,
@@ -71,5 +91,6 @@ export default [
       strict: 'error',
     },
   },
+  ...tsConfigs,
   ...overrides,
 ];

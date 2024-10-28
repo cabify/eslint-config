@@ -39,7 +39,6 @@
     ".": "./recommended.js"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^8.4.0",
     "@typescript-eslint/parser": "^8.4.0",
     "confusing-browser-globals": "^1.0.10",
     "eslint-config-prettier": "^9.1.0",
@@ -55,15 +54,12 @@
     "typescript-eslint": "^8.8.0"
   },
   "peerDependencies": {
-    "eslint": "9.11.0",
+    "eslint": ">= 9.11.0",
     "prettier": ">= 2.2.1"
   },
   "devDependencies": {
-    "@eslint/js": "^9.11.1",
-    "@types/eslint__js": "^8.42.3",
     "eslint": "^9.11.1",
-    "prettier": "3.3.3",
-    "typescript": "^5.6.2"
+    "prettier": "3.3.3"
   },
   "publishConfig": {
     "access": "public"

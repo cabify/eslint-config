@@ -1,18 +1,20 @@
+import globals from 'globals';
+
 export default {
   name: 'ES6-cabify-eslint-config',
-  // languageOptions: {
-  //   globals: {
-  //     es6: true,
-  //   },
-  //   ecmaVersion: 6,
-  //   sourceType: 'module',
-  //   parserOptions: {
-  //     ecmaFeatures: {
-  //       generators: false,
-  //       objectLiteralDuplicateProperties: false,
-  //     },
-  //   },
-  // },
+  languageOptions: {
+    ecmaVersion: 6,
+    sourceType: 'module',
+    globals: {
+      ...globals.es2015,
+    },
+    parserOptions: {
+      ecmaFeatures: {
+        generators: false,
+        objectLiteralDuplicateProperties: false,
+      },
+    },
+  },
 
   rules: {
     // verify super() callings in constructors

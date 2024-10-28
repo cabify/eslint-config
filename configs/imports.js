@@ -1,13 +1,14 @@
 import importPlugin from 'eslint-plugin-import';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
+import globals from 'globals';
 
 export default {
   name: 'imports-cabify-eslint-config',
-  // languageOptions: {
-  //   globals: {
-  //     es6: true,
-  //   },
-  // },
+  languageOptions: {
+    globals: {
+      ...globals.es2015,
+    },
+  },
   plugins: {
     import: importPlugin,
     'simple-import-sort': simpleImportSort,
