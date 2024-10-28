@@ -1,4 +1,8 @@
-export default {
+/* eslint-disable import/no-unresolved */
+/* eslint-disable no-param-reassign */
+import tseslint from 'typescript-eslint';
+
+const tsCustomConfig = {
   name: 'ts-cabify-eslint-config',
   files: ['**/*.ts', '**/*.tsx'],
   rules: {
@@ -140,3 +144,18 @@ export default {
   },
   ignores: ['*.d.ts'],
 };
+
+const tsLintConfig = tseslint.config(
+  ...tseslint.configs.recommended,
+  ...tseslint.configs.recommendedTypeChecked,
+  { ...tsCustomConfig },
+);
+
+if (tsLintConfig.length) {
+  tsLintConfig.forEach((tsconfig) => {
+    tsconfig.files = ['**/*.ts', '**/*.tsx'];
+    tsconfig.ignores = ['**/*.d.ts'];
+  });
+}
+
+export default tsLintConfig;
