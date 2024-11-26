@@ -4,4 +4,4 @@ on: [push]
 
 jobs:
   test:
-    uses: cabify/javascript-actions/.github/workflows/tests.yml@main
+    uses: cabify/javascript-actions/.github/workflows/tests.yml@node-version-20
