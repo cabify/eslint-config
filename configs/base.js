@@ -19,12 +19,52 @@ import strict from './strict.js';
 import style from './style.js';
 import variables from './variables.js';
 
-const isTSAvailable = await isPackageAvailable('typescript');
+async function checkIsTSAvailable() {
+  try {
+    // Dynamically import the package
+    await import('typescript');
+    console.log(`Package typescript is available`);
+    return true;
+  } catch (error) {
+    console.log(error);
+    console.log(`Package typescript is not available`);
+    return false;
+  }
+}
+
+async function checkJestTSAvailable() {
+  try {
+    // Dynamically import the package
+    await import('jest');
+    console.log(`Package jest is available`);
+    return true;
+  } catch (error) {
+    console.log(error);
+    console.log(`Package jest is not available`);
+    return false;
+  }
+}
+
+async function checkNextJSAvailable() {
+  try {
+    // Dynamically import the package
+    await import('next');
+    console.log(`Package next is available`);
+    return true;
+  } catch (error) {
+    console.log(error);
+    console.log(`Package next is not available`);
+    return false;
+  }
+}
+
+const isTSAvailable = true;
 let tsConfigs = [];
 if (isTSAvailable) {
   tsConfigs = await import('./ts.js');
 }
-const isJestAvailable = await isPackageAvailable('jest');
+const isJestAvailable = await checkJestTSAvailable();
+checkNextJSAvailable();
 
 const configs = [
   bestPractices,
@@ -53,6 +93,8 @@ const overrides = [
     ...postcss,
   },
 ].filter(Boolean);
+
+console.log({ tsConfigs });
 
 export default [
   ...configs,

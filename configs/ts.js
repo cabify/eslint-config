@@ -146,9 +146,9 @@ const tsCustomConfig = {
 };
 
 const tsLintConfig = tseslint.config(
-  ...tseslint.configs.recommended,
-  ...tseslint.configs.recommendedTypeChecked,
-  { ...tsCustomConfig },
+  tseslint.configs.recommended,
+  tseslint.configs.recommendedTypeChecked,
+  tsCustomConfig,
 );
 
 if (tsLintConfig.length) {
