@@ -19,6 +19,7 @@ import strict from './strict.js';
 import style from './style.js';
 import variables from './variables.js';
 
+/*
 async function checkIsTSAvailable() {
   try {
     // Dynamically import the package
@@ -44,14 +45,15 @@ async function checkJestTSAvailable() {
     return false;
   }
 }
+*/
 
-const isTSAvailable = await checkIsTSAvailable();
+const isTSAvailable = await isPackageAvailable('typescript');
 let tsConfigs = [];
 if (isTSAvailable) {
   const { tsLintConfig } = await import('./ts.js');
   tsConfigs = tsLintConfig;
 }
-const isJestAvailable = await checkJestTSAvailable();
+const isJestAvailable = await isPackageAvailable('jest');
 
 const configs = [
   bestPractices,
