@@ -158,4 +158,4 @@ if (tsLintConfig.length) {
   });
 }
 
-export default tsLintConfig;
+export { tsLintConfig };

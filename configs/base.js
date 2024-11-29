@@ -45,26 +45,13 @@ async function checkJestTSAvailable() {
   }
 }
 
-async function checkNextJSAvailable() {
-  try {
-    // Dynamically import the package
-    await import('next');
-    console.log(`Package next is available`);
-    return true;
-  } catch (error) {
-    console.log(error);
-    console.log(`Package next is not available`);
-    return false;
-  }
-}
-
-const isTSAvailable = true;
+const isTSAvailable = await checkIsTSAvailable();
 let tsConfigs = [];
 if (isTSAvailable) {
-  tsConfigs = await import('./ts.js');
+  const { tsLintConfig } = await import('./ts.js');
+  tsConfigs = tsLintConfig;
 }
 const isJestAvailable = await checkJestTSAvailable();
-checkNextJSAvailable();
 
 const configs = [
   bestPractices,
