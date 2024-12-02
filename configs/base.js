@@ -19,34 +19,6 @@ import strict from './strict.js';
 import style from './style.js';
 import variables from './variables.js';
 
-/*
-async function checkIsTSAvailable() {
-  try {
-    // Dynamically import the package
-    await import('typescript');
-    console.log(`Package typescript is available`);
-    return true;
-  } catch (error) {
-    console.log(error);
-    console.log(`Package typescript is not available`);
-    return false;
-  }
-}
-
-async function checkJestTSAvailable() {
-  try {
-    // Dynamically import the package
-    await import('jest');
-    console.log(`Package jest is available`);
-    return true;
-  } catch (error) {
-    console.log(error);
-    console.log(`Package jest is not available`);
-    return false;
-  }
-}
-*/
-
 const isTSAvailable = await isPackageAvailable('typescript');
 let tsConfigs = [];
 if (isTSAvailable) {
@@ -59,7 +31,7 @@ const configs = [
   bestPractices,
   errors,
   es6,
-  imports,
+  ...imports,
   node,
   promises,
   strict,
@@ -82,8 +54,6 @@ const overrides = [
     ...postcss,
   },
 ].filter(Boolean);
-
-console.log({ tsConfigs });
 
 export default [
   ...configs,

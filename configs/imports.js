@@ -2,7 +2,7 @@ import importPlugin from 'eslint-plugin-import';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
 import globals from 'globals';
 
-export default {
+const configs = {
   name: 'imports-cabify-eslint-config',
   languageOptions: {
     globals: {
@@ -10,7 +10,6 @@ export default {
     },
   },
   plugins: {
-    import: importPlugin,
     'simple-import-sort': simpleImportSort,
   },
   settings: {
@@ -275,3 +274,5 @@ export default {
     'import/no-relative-parent-imports': 'off',
   },
 };
+
+export default [importPlugin.flatConfigs.recommended, configs];
