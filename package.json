@@ -1,6 +1,6 @@
 {
   "name": "@cabify/eslint-config",
-  "version": "3.0.1-beta-13",
+  "version": "3.0.1-beta-14",
   "description": "ESLint config for Cabify Javascript projects",
   "type": "module",
   "scripts": {
