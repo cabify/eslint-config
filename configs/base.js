@@ -41,18 +41,9 @@ const configs = [
   lodash,
   reactA11y,
   formats,
+  storybook,
+  postcss,
   isJestAvailable && jest,
-].filter(Boolean);
-
-const overrides = [
-  {
-    files: ['*.story.tsx', '*.stories.tsx'],
-    ...storybook,
-  },
-  {
-    files: ['postcss.config.js'],
-    ...postcss,
-  },
 ].filter(Boolean);
 
 export default [
@@ -72,5 +63,4 @@ export default [
     },
   },
   ...tsConfigs,
-  ...overrides,
 ];

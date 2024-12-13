@@ -1,5 +1,6 @@
 /* eslint-disable import/no-unresolved */
 /* eslint-disable no-param-reassign */
+import path from 'path';
 import tseslint from 'typescript-eslint';
 
 const tsCustomConfig = {
@@ -139,7 +140,7 @@ const tsCustomConfig = {
   languageOptions: {
     parserOptions: {
       projectService: true,
-      tsconfigRootDir: import.meta.dirname,
+      tsconfigRootDir: path.resolve(process.cwd()),
     },
   },
   ignores: ['*.d.ts'],
