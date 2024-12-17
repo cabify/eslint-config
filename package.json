@@ -36,7 +36,8 @@
   ],
   "main": "../recommended.js",
   "exports": {
-    ".": "./recommended.js"
+    "require": "./eslint.config.cjs",
+    "import": "./eslint.config.js"
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^8.15.0",

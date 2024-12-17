@@ -1,7 +1,6 @@
 /* eslint-disable import/extensions */
 import globals from 'globals';
 
-import { isPackageAvailable } from '../utils.js';
 import bestPractices from './best-practices.js';
 import errors from './errors.js';
 import es6 from './es6.js';
@@ -17,6 +16,7 @@ import reactA11y from './react-a11y.js';
 import storybook from './storybook.js';
 import strict from './strict.js';
 import style from './style.js';
+import { isPackageAvailable } from './utils.js';
 import variables from './variables.js';
 
 const isTSAvailable = await isPackageAvailable('typescript');
