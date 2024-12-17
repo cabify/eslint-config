@@ -1,13 +1,18 @@
+const globals = require('globals');
+
 module.exports = {
-  env: {
-    es6: true,
-  },
-  parserOptions: {
+  name: 'ES6-cabify-eslint-config',
+  languageOptions: {
     ecmaVersion: 6,
     sourceType: 'module',
-    ecmaFeatures: {
-      generators: false,
-      objectLiteralDuplicateProperties: false,
+    globals: {
+      ...globals.es2015,
+    },
+    parserOptions: {
+      ecmaFeatures: {
+        generators: false,
+        objectLiteralDuplicateProperties: false,
+      },
     },
   },
 
