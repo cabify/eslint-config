@@ -41,7 +41,6 @@ bower_components/
 # VSCode
 .vscode/
 
-dist/
 es2015/
 dev-build/
 # Local env variables
