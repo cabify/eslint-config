@@ -1,9 +1,17 @@
-module.exports = {
-  env: {
-    es6: true,
-  },
-  plugins: ['import', 'simple-import-sort'],
+import importPlugin from 'eslint-plugin-import';
+import simpleImportSort from 'eslint-plugin-simple-import-sort';
+import globals from 'globals';
 
+const configs = {
+  name: 'imports-cabify-eslint-config',
+  languageOptions: {
+    globals: {
+      ...globals.es2015,
+    },
+  },
+  plugins: {
+    'simple-import-sort': simpleImportSort,
+  },
   settings: {
     'import/resolver': {
       node: {
@@ -107,7 +115,7 @@ module.exports = {
 
     // disallow AMD require/define
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-amd.md
-    'import/no-amd': 'error',
+    // 'import/no-amd': 'error',
 
     // No Node.js builtin modules
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-nodejs-modules.md
@@ -155,7 +163,7 @@ module.exports = {
 
     // Require a newline after the last import/require in a group
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/newline-after-import.md
-    'import/newline-after-import': 'error',
+    // 'import/newline-after-import': 'error',
 
     // Require modules with a single export to use a default export
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/prefer-default-export.md
@@ -266,3 +274,5 @@ module.exports = {
     'import/no-relative-parent-imports': 'off',
   },
 };
+
+export default [importPlugin.flatConfigs.recommended, configs];

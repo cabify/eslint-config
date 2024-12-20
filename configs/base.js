@@ -1,52 +1,71 @@
-const { isPackageAvailable } = require('../utils');
+/* eslint-disable import/extensions */
+import globals from 'globals';
 
-const isTSAvailable = isPackageAvailable('typescript');
-const isJestAvailable = isPackageAvailable('jest');
+import bestPractices from './best-practices.js';
+import errors from './errors.js';
+import es6 from './es6.js';
+import formats from './formats.js';
+import imports from './imports.js';
+import jest from './jest.js';
+import lodash from './lodash.js';
+import node from './node.js';
+import postcss from './postcss.js';
+import promises from './promises.js';
+import react from './react.js';
+import reactA11y from './react-a11y.js';
+import storybook from './storybook.js';
+import strict from './strict.js';
+import style from './style.js';
+import { isPackageAvailable } from './utils.js';
+import variables from './variables.js';
+
+let isTSAvailable = false;
+let isJestAvailable = false;
+let tsConfigs = [];
+
+(async () => {
+  isTSAvailable = await isPackageAvailable('typescript');
+  isJestAvailable = await isPackageAvailable('jest');
+  if (isTSAvailable) {
+    const { tsLintConfig } = await import('./ts.js');
+    tsConfigs = tsLintConfig;
+  }
+})();
 
 const configs = [
-  './best-practices',
-  './errors',
-  './es6',
-  './imports',
-  './node',
-  './promises',
-  './strict',
-  './style',
-  './variables',
-  './react',
-  './lodash',
-  './react-a11y',
-  isJestAvailable && './jest',
+  bestPractices,
+  errors,
+  es6,
+  ...imports,
+  node,
+  promises,
+  strict,
+  style,
+  variables,
+  react,
+  lodash,
+  reactA11y,
+  formats,
+  storybook,
+  postcss,
+  isJestAvailable && jest,
 ].filter(Boolean);
 
-const overrides = [
-  isTSAvailable && {
-    files: ['**/*.ts', '**/*.tsx'],
-    excludedFiles: '*.d.ts',
-    extends: ['./ts'],
-  },
+export default [
+  ...configs,
   {
-    files: ['*.story.tsx', '*.stories.tsx'],
-    extends: ['./storybook'],
+    name: 'base-cabify-eslint-config',
+    languageOptions: {
+      ecmaVersion: 2022,
+      sourceType: 'module',
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+      },
+    },
+    rules: {
+      strict: 'error',
+    },
   },
-  {
-    files: ['postcss.config.js'],
-    extends: ['./postcss'],
-  },
-].filter(Boolean);
-
-module.exports = {
-  env: {
-    browser: true,
-    node: true,
-  },
-  extends: configs,
-  parserOptions: {
-    ecmaVersion: 2018,
-    sourceType: 'module',
-  },
-  rules: {
-    strict: 'error',
-  },
-  overrides,
-};
+  ...tsConfigs,
+];
