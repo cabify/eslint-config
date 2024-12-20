@@ -4,7 +4,7 @@
   "description": "ESLint config for Cabify Javascript projects",
   "type": "module",
   "scripts": {
-    "build": "echo 'No build to perform'",
+    "build": "vite build",
     "test": "npm run lint:check && npm run format:check",
     "lint": "eslint . --fix",
     "lint:check": "eslint .",
@@ -36,8 +36,8 @@
   ],
   "main": "../recommended.js",
   "exports": {
-    "require": "./eslint.config.cjs",
-    "import": "./eslint.config.js"
+    "require": "./dist/eslint.config.cjs",
+    "import": "./.dist/eslint.config.js"
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^8.15.0",
@@ -60,7 +60,8 @@
   },
   "devDependencies": {
     "eslint": "^9.11.1",
-    "prettier": "3.3.3"
+    "prettier": "3.3.3",
+    "vite": "^6.0.5"
   },
   "publishConfig": {
     "access": "public"

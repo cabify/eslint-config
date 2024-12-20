@@ -19,13 +19,18 @@ import style from './style.js';
 import { isPackageAvailable } from './utils.js';
 import variables from './variables.js';
 
-const isTSAvailable = await isPackageAvailable('typescript');
+let isTSAvailable = false;
+let isJestAvailable = false;
 let tsConfigs = [];
-if (isTSAvailable) {
-  const { tsLintConfig } = await import('./ts.js');
-  tsConfigs = tsLintConfig;
-}
-const isJestAvailable = await isPackageAvailable('jest');
+
+(async () => {
+  isTSAvailable = await isPackageAvailable('typescript');
+  isJestAvailable = await isPackageAvailable('jest');
+  if (isTSAvailable) {
+    const { tsLintConfig } = await import('./ts.js');
+    tsConfigs = tsLintConfig;
+  }
+})();
 
 const configs = [
   bestPractices,
