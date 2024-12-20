@@ -7,6 +7,8 @@ export default defineConfig({
       entry: './eslint.config.js', // Your entry file
       name: '@cabify/eslint-config', // Global variable name (for UMD/IIFE)
       formats: ['es', 'cjs'], // Output both ESM and CommonJS
+      fileName: (format) =>
+        format === 'es' ? 'eslint.config.js' : 'eslint.config.cjs', // Explicit output filenames
     },
     optimizeDeps: {
       esbuildOptions: {
