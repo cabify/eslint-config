@@ -5,9 +5,17 @@ on:
     types: [created]
 
 jobs:
-  publish-npm:
-    uses: cabify/javascript-actions/.github/workflows/npm_publish.yml@main
-    with:
-      tag: ${{ contains(github.ref_name,'beta') && 'beta' || 'latest' }}
-    secrets:
-      token: ${{ secrets.NPM_TOKEN }}
+ publish-npm:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: "yarn"
+          registry-url: 'https://registry.npmjs.org'
+      - run: yarn install
+      - run: yarn build
+      - run: npm publish --tag ${{ inputs.tag }}
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.token }}
