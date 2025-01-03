@@ -1,4 +1,5 @@
 /* eslint-disable import/extensions */
+import eslintConfigPrettier from 'eslint-config-prettier';
 import globals from 'globals';
 
 import bestPractices from './best-practices.js';
@@ -37,22 +38,23 @@ const configs = [
   errors,
   es6,
   ...imports,
+  postcss,
   node,
   promises,
   strict,
   style,
   variables,
   react,
-  lodash,
   reactA11y,
   formats,
   storybook,
-  postcss,
+  lodash,
+
   isJestAvailable && jest,
 ].filter(Boolean);
-
-export default [
+const rules = [
   ...configs,
+  {},
   {
     name: 'base-cabify-eslint-config',
     languageOptions: {
@@ -68,4 +70,7 @@ export default [
     },
   },
   ...tsConfigs,
+  eslintConfigPrettier,
 ];
+
+export default rules;

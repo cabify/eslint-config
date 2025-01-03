@@ -1,5 +1,5 @@
 /* eslint-disable import/no-unresolved */
-/* eslint-disable no-param-reassign */
+
 import path from 'path';
 import tseslint from 'typescript-eslint';
 
@@ -154,7 +154,9 @@ const tsLintConfig = tseslint.config(
 
 if (tsLintConfig.length) {
   tsLintConfig.forEach((tsconfig) => {
+    // eslint-disable-next-line no-param-reassign
     tsconfig.files = ['**/*.ts', '**/*.tsx'];
+    // eslint-disable-next-line no-param-reassign
     tsconfig.ignores = ['**/*.d.ts'];
   });
 }
