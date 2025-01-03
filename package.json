@@ -4,7 +4,9 @@
   "description": "ESLint config for Cabify Javascript projects",
   "type": "module",
   "scripts": {
-    "build": "vite build",
+    "build:es": "BUILD_FORMAT=es vite build",
+    "build:cjs": "BUILD_FORMAT=cjs vite build",
+    "build": "npm run build:esm && npm run build:cjs",
     "test": "npm run lint:check && npm run format:check",
     "lint": "eslint . --fix",
     "lint:check": "eslint .",
@@ -64,7 +66,8 @@
   "devDependencies": {
     "eslint": "^9.11.1",
     "prettier": "3.3.3",
-    "vite": "^6.0.5"
+    "vite": "^6.0.5",
+    "vite-plugin-top-level-await": "^1.4.4"
   },
   "publishConfig": {
     "access": "public"
