@@ -3,7 +3,7 @@ import { defineConfig } from 'vite';
 export default defineConfig({
   build: {
     lib: {
-      entry: './eslint.config.js',
+      entry: './recommended.js',
       name: '@cabify/eslint-config',
       formats: ['cjs'],
       fileName: () => `eslint.config.cjs`,
@@ -20,6 +20,8 @@ export default defineConfig({
       external: [
         'eslint',
         'eslint-plugin-import',
+        'path',
+        'typescript-eslint',
         '@typescript-eslint/parser',
         '@typescript-eslint/eslint-plugin',
         'eslint-plugin-prettier/recommended',
