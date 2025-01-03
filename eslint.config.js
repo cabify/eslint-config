@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/extensions
 import defaultRules from './configs/base.js';
 
 const globalIgnores = {
