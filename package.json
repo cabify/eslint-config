@@ -34,10 +34,13 @@
     "style",
     "standards"
   ],
-  "main": "../recommended.js",
+  "main": "./dist/eslint.config.cjs",
+  "module": "./dist/eslint.config.js",
   "exports": {
-    "require": "./dist/eslint.config.cjs",
-    "import": "./eslint.config.js"
+    ".": {
+      "require": "./dist/eslint.config.cjs",
+      "import": "./eslint.config.js"
+    }
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^8.15.0",

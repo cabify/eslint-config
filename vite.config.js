@@ -5,8 +5,8 @@ export default defineConfig({
     lib: {
       entry: './recommended.js',
       name: '@cabify/eslint-config',
-      formats: ['cjs'],
-      fileName: () => `eslint.config.cjs`,
+      formats: ['es','cjs'],
+      fileName: (format) => format === 'es' ? 'eslint.config.js' : 'eslint.config.cjs',
     },
     optimizeDeps: {
       esbuildOptions: {
