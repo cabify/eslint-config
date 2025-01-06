@@ -26,7 +26,8 @@ async function getConditionalPackages() {
   }
 
   if (isJestAvailable) {
-    jestConfigs = await import('./jest.js');
+    const jestModule = require('./jest.js');
+    jestConfigs = jestModule.jestConf;
   }
 
   return {

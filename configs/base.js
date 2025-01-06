@@ -1,9 +1,11 @@
+/* eslint-disable prefer-destructuring */
+/* eslint-disable global-require */
+
 /* eslint-disable import/extensions */
 import eslintConfigPrettier from 'eslint-config-prettier';
 import globals from 'globals';
 
 import bestPractices from './best-practices.js';
-import { getConditionalPackages } from './conditionalPackages.js';
 import errors from './errors.js';
 import es6 from './es6.js';
 import formats from './formats.js';
@@ -19,7 +21,25 @@ import strict from './strict.js';
 import style from './style.js';
 import variables from './variables.js';
 
-const { jestConfigs, tsConfigs } = await getConditionalPackages();
+// Placeholder for conditional import (will be replaced in build)
+let jestConfigs = {};
+let tsConfigs = [];
+
+// ESM placeholder (dynamic replacement during build)
+if (process.env.BUILD_FORMAT === 'es') {
+  const { getConditionalPackages } = await import('./conditionalPackages.js');
+  const packages = await getConditionalPackages();
+  jestConfigs = packages.jestConfigs;
+  tsConfigs = packages.tsConfigs;
+}
+
+// CJS placeholder (dynamic replacement during build)
+if (process.env.BUILD_FORMAT === 'cjs') {
+  const { getConditionalPackages } = require('./conditionalPackages.cjs');
+  const packages = getConditionalPackages();
+  jestConfigs = packages.jestConfigs;
+  tsConfigs = packages.tsConfigs;
+}
 
 const configs = [
   bestPractices,
@@ -55,7 +75,7 @@ const rules = [
       strict: 'error',
     },
   },
-  jestConfigs,
+  { ...jestConfigs },
   ...tsConfigs,
   eslintConfigPrettier,
 ];

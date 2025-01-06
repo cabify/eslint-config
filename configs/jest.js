@@ -1,9 +1,12 @@
 import jest from 'eslint-plugin-jest';
 
-export default {
+const jestConf = {
   name: 'jest-cabify-eslint-config',
   ...jest.configs['flat/recommended'],
   rules: {
     ...jest.configs['flat/recommended'].rules,
   },
 };
+
+// eslint-disable-next-line import/prefer-default-export
+export { jestConf };

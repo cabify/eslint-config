@@ -1,19 +1,14 @@
 import { defineConfig } from 'vite';
 import topLevelAwait from 'vite-plugin-top-level-await';
+import replace from '@rollup/plugin-replace';
 
 export default defineConfig((configs) => {
   const buildFormat = process.env.BUILD_FORMAT || 'es';
 
   return {
-    plugins: [
-      topLevelAwait({
-        // The export name of top-level await promise for each chunk module
-        promiseExportName: '__tla',
-        // The function to generate import names of top-level await promise in each chunk module
-        promiseImportName: (i) => `__tla_${i}`,
-      }),
-    ],
     build: {
+      emptyOutDir: false,
+      outDir: 'dist',
       lib: {
         entry: './recommended.js',
         name: '@cabify/eslint-config',
@@ -40,6 +35,14 @@ export default defineConfig((configs) => {
           'eslint-plugin-prettier/recommended',
           'eslint-plugin-lodash',
           'eslint-plugin-jest',
+        ],
+        plugins: [
+          replace({
+            preventAssignment: true,
+            values: {
+              'process.env.BUILD_FORMAT': JSON.stringify(buildFormat || 'es'),
+            },
+          }),
         ],
       },
     },
