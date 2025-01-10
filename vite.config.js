@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite';
+import copy from 'rollup-plugin-copy';
 import topLevelAwait from 'vite-plugin-top-level-await';
 import replace from '@rollup/plugin-replace';
 
@@ -42,6 +43,14 @@ export default defineConfig((configs) => {
             values: {
               'process.env.BUILD_FORMAT': JSON.stringify(buildFormat || 'es'),
             },
+          }),
+          copy({
+            targets: [
+              {
+                src: 'configs/conditionalPackagesLegacy.js',
+                dest: 'dist',
+              },
+            ],
           }),
         ],
       },

@@ -8,11 +8,11 @@ async function n(t) {
 const l = async () => {
   let t = !1, a = !1, e = [], s = {};
   if (t = await n("typescript"), a = await n("jest"), t) {
-    const { tsLintConfig: i } = await import("./ts-CiBFLphe.js");
+    const { tsLintConfig: i } = await import("./ts-CiBFLphe.mjs");
     e = i;
   }
   if (a) {
-    const { jestConf: i } = await import("./jest-TBYNSpnp.js");
+    const { jestConf: i } = await import("./jest-TBYNSpnp.mjs");
     s = i;
   }
   return {

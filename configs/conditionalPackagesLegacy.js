@@ -11,7 +11,7 @@ function isPackageAvailable(packageName) {
   }
 }
 
-async function getConditionalPackages() {
+const getConditionalPackages = () => {
   let isTSAvailable = false;
   let isJestAvailable = false;
   let tsConfigs = [];
@@ -34,7 +34,7 @@ async function getConditionalPackages() {
     jestConfigs,
     tsConfigs,
   };
-}
+};
 
 module.exports = {
   getConditionalPackages,
