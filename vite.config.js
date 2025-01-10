@@ -47,7 +47,7 @@ export default defineConfig((configs) => {
           copy({
             targets: [
               {
-                src: 'configs/conditionalPackagesLegacy.js',
+                src: 'configs/conditionalPackagesLegacy.cjs',
                 dest: 'dist',
               },
             ],

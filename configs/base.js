@@ -35,7 +35,7 @@ if (process.env.BUILD_FORMAT === 'es') {
 
 // CJS placeholder (dynamic replacement during build)
 if (process.env.BUILD_FORMAT === 'cjs') {
-  const { getConditionalPackages } = require('./conditionalPackagesLegacy.js');
+  const { getConditionalPackages } = require('./conditionalPackagesLegacy.cjs');
   const packages = getConditionalPackages();
   jestConfigs = packages.jestConfigs;
   tsConfigs = packages.tsConfigs;
