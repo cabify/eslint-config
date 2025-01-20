@@ -1,6 +1,5 @@
 import { defineConfig } from 'vite';
 import copy from 'rollup-plugin-copy';
-import topLevelAwait from 'vite-plugin-top-level-await';
 import replace from '@rollup/plugin-replace';
 
 export default defineConfig((configs) => {
@@ -11,7 +10,7 @@ export default defineConfig((configs) => {
       emptyOutDir: false,
       outDir: 'dist',
       lib: {
-        entry: './recommended.js',
+        entry: './eslint.config-2.js',
         name: '@cabify/eslint-config',
         formats: [buildFormat],
         fileName: () =>
@@ -26,6 +25,22 @@ export default defineConfig((configs) => {
         },
       },
       rollupOptions: {
+        input: {
+          index: './configs/base.js',
+          jest: './configs/jest.js',
+          ts: './configs/ts.js', // Adjust the paths as per your source files
+        },
+        output: {
+          entryFileNames: (chunk) => {
+            if (chunk.name === 'index')
+              return buildFormat === 'es'
+                ? 'eslint.config.js'
+                : 'eslint.config.cjs';
+            if (chunk.name === 'jest') return 'jest.js';
+            if (chunk.name === 'ts') return 'ts.js';
+            return '[name]-[hash].js'; // Default pattern
+          },
+        },
         external: [
           'eslint',
           'eslint-plugin-import',
@@ -48,6 +63,14 @@ export default defineConfig((configs) => {
             targets: [
               {
                 src: 'configs/conditionalPackagesLegacy.cjs',
+                dest: 'dist',
+              },
+              {
+                src: 'configs/ts.cjs',
+                dest: 'dist',
+              },
+              {
+                src: 'configs/jest.cjs',
                 dest: 'dist',
               },
             ],

@@ -76610,7 +76610,7 @@ const TYt = /* @__PURE__ */ Yr(AYt), xYt = {
 };
 let lH = {}, gH = [];
 {
-  const { getConditionalPackages: o } = await import("./conditionalPackages-bfybcqmF.js"), i = await o();
+  const { getConditionalPackages: o } = await import("./conditionalPackages-CS9m2_zE.js"), i = await o();
   lH = i.jestConfigs, gH = i.tsConfigs;
 }
 const wYt = [
@@ -76629,7 +76629,7 @@ const wYt = [
   Yge,
   hYt,
   ice
-].filter(Boolean), EYt = [
+].filter(Boolean), PYt = [
   ...wYt,
   {},
   {
@@ -76649,9 +76649,7 @@ const wYt = [
   { ...lH },
   ...gH,
   ege
-], CYt = {
-  ignores: ["dist", "node_modules/*", "build", "scripts", "vite.config.js"]
-}, _Yt = [...EYt, CYt];
+];
 export {
-  _Yt as default
+  PYt as default
 };
