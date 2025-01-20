@@ -1,1 +1,11 @@
-"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("eslint-plugin-jest"),t={name:"jest-cabify-eslint-config",...e.configs["flat/recommended"],rules:{...e.configs["flat/recommended"].rules}};exports.jestConf=t;
+import e from "eslint-plugin-jest";
+const n = {
+  name: "jest-cabify-eslint-config",
+  ...e.configs["flat/recommended"],
+  rules: {
+    ...e.configs["flat/recommended"].rules
+  }
+};
+export {
+  n as jestConf
+};

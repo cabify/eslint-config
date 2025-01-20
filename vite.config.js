@@ -10,7 +10,7 @@ export default defineConfig((configs) => {
       emptyOutDir: false,
       outDir: 'dist',
       lib: {
-        entry: './eslint.config-2.js',
+        entry: './eslint.config.js',
         name: '@cabify/eslint-config',
         formats: [buildFormat],
         fileName: () =>
@@ -32,12 +32,10 @@ export default defineConfig((configs) => {
         },
         output: {
           entryFileNames: (chunk) => {
-            if (chunk.name === 'index')
-              return buildFormat === 'es'
-                ? 'eslint.config.js'
-                : 'eslint.config.cjs';
-            if (chunk.name === 'jest') return 'jest.js';
-            if (chunk.name === 'ts') return 'ts.js';
+            const extension = buildFormat === 'es' ? '.js' : '.cjs';
+            if (chunk.name === 'index') return `eslint.config${extension}`;
+            if (chunk.name === 'jest') return `jest${extension}`;
+            if (chunk.name === 'ts') return `ts${extension}`;
             return '[name]-[hash].js'; // Default pattern
           },
         },

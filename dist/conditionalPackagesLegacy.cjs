@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-/* eslint-disable import/extensions */
+
 /* eslint-disable global-require */
 function isPackageAvailable(packageName) {
   try {
@@ -21,12 +21,12 @@ const getConditionalPackages = () => {
   isJestAvailable = isPackageAvailable('jest');
 
   if (isTSAvailable) {
-    const tsModule = require('./ts.js');
+    const tsModule = require('./ts.cjs');
     tsConfigs = tsModule.tsLintConfig;
   }
 
   if (isJestAvailable) {
-    const jestModule = require('./jest.js');
+    const jestModule = require('./jest.cjs');
     jestConfigs = jestModule.jestConf;
   }
 
