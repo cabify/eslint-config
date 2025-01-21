@@ -21,11 +21,9 @@ import strict from './strict.js';
 import style from './style.js';
 import variables from './variables.js';
 
-// Placeholder for conditional import (will be replaced in build)
 let jestConfigs = {};
 let tsConfigs = [];
 
-// ESM placeholder (dynamic replacement during build)
 if (process.env.BUILD_FORMAT === 'es') {
   const { getConditionalPackages } = await import('./conditionalPackages.js');
   const packages = await getConditionalPackages();
@@ -33,7 +31,6 @@ if (process.env.BUILD_FORMAT === 'es') {
   tsConfigs = packages.tsConfigs;
 }
 
-// CJS placeholder (dynamic replacement during build)
 if (process.env.BUILD_FORMAT === 'cjs') {
   const { getConditionalPackages } = require('./conditionalPackagesLegacy.cjs');
   const packages = getConditionalPackages();
