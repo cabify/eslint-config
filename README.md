@@ -24,15 +24,16 @@ yarn add --dev @cabify/eslint-config eslint prettier
 
 ## Usage
 
-1. Create a `.eslintrc` file at the root of your project:
+1. Create a `.eslint.config.js` file at the root of your project:
 
-```json
-{
-  "extends": ["@cabify/eslint-config/recommended"],
-  "rules": {
-    // Additional, per-project rules...
-  }
-}
+```js
+import recommended from '@cabify/eslint-config';
+/* Define an object for local configuration. 
+/ You can add your custom configuration and override existing rules here before exporting it.
+const localConfig = {};
+export default [...recommended, localConfig];
+*/
+export default [...recommended];
 ```
 
 2. Add the lint task into your `package.json`:
@@ -41,15 +42,29 @@ yarn add --dev @cabify/eslint-config eslint prettier
 ...
 "scripts": {
   ...
-  "lint": "eslint .",
-  "lint:fix": "eslint . --fix",
+  "lint:fix": "eslint ./ --fix",
+  "lint": "eslint ./",
   ...
 }
 ```
 
-3. Add a `.eslintignore` file to avoid checking unwanted files:
+3. Add a `.globalIgnores` in your `eslint.config.js` to avoid checking unwanted files:
 
-https://eslint.org/docs/user-guide/configuring/ignoring-code#the-eslintignore-file
+```js
+// https://eslint.org/docs/latest/use/configure/configuration-files#globally-ignoring-files-with-ignores
+const globalIgnores = {
+  ignores: [
+    'dist',
+    'node_modules/*',
+    'storybook-static/*',
+    'test/*',
+    'build',
+    'scripts',
+    'webpack',
+  ],
+};
+export default [...recommended, globalIgnores];
+```
 
 ### Formatting
 
@@ -66,67 +81,27 @@ To format the files from your app a and checking them are properly formatted you
 }
 ```
 
-### Setup for Babel
-
-If you use non-standard features in your JS code (like decorators),
-or custom configs to import files you'll need to use `babel-eslint` as parser.
-To do so, install the following dependencies and modify your `.eslintrc` file accordingly:
-
-```sh
-yarn add --dev babel-eslint eslint-import-resolver-babel-module
-```
-
-or
-
-```sh
-yarn add --dev babel-eslint eslint-import-resolver-babel-module
-```
-
-Modify `.eslintrc`:
-
-```json
-{
-  ...
-  "parser": "babel-eslint",
-  "settings": {
-    ...
-    "import/resolver": {
-      "babel-module": {}
-    }
-  }
-}
-```
-
 ### Setup for TypeScript
 
-1.  Install the following dependencies:
-
-```sh
-npm i -D eslint-import-resolver-typescript
-```
-
-or
-
-```sh
-yarn add --dev eslint-import-resolver-typescript
-```
-
-2. Modify `.eslintrc`:
-
-```json
-{
-  ...
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "project": "./tsconfig.eslint.json"
+```js
+const localConfigs = {
+  languageOptions: {
+    parserOptions: {
+      project: './tsconfig.json',
+      ecmaVersion: 2020,
+    },
   },
-  "settings": {
-    ...
-    "import/resolver": {
-      "typescript": {}
-    }
-  }
-}
+  settings: {
+    'import/resolver': {
+      typescript: {
+        alwaysTryTypes: true, // always try to resolve types under `<root>@types` directory even it doesn't contain any source code, like `@types/unist`
+        project: '<root>/tsconfig.json',
+      },
+    },
+  },
+};
+
+export default [...recommended, localConfigs];
 ```
 
 3.  Add a `./tsconfig.eslint.json` to the root of your project.
@@ -162,69 +137,6 @@ some rules. If you can live without them, just make these changes in your `.esli
     "@typescript-eslint/require-await": "off",
     "@typescript-eslint/unbound-method": "off"
   }
-}
-```
-
-### Setup for Jest
-
-If you use Jest, installing its import resolver into your project is encouraged.
-
-1.  Install the following dependencies:
-
-```sh
-npm i -D eslint-import-resolver-jest
-```
-
-or
-
-```sh
-yarn add --dev eslint-import-resolver-jest
-```
-
-2. Modify `.eslintrc`:
-
-```json
-{
-  ...
-  "settings": {
-    ...
-    "import/resolver": {
-      ...
-      "jest": {
-      "jestConfigFile": "./jest.config.js"
-      }
-    }
-  }
-}
-```
-
-If you want to ensure that this resolver only applies to your test files, you can use ESLint's overrides configuration option:
-
-```json
-"overrides": [
-  {
-    "files": ["**/__tests__/**/*.js"],
-    "settings": {
-      "import/resolver": {
-        "jest": {
-          "jestConfigFile": "./jest.config.js"
-        }
-      }
-    }
-  }
-]
-```
-
-3. Make sure that you have set up your jest config file (e.g., `./jest.config.js` )
-
-## Legacy
-
-If you want to maintain the formatting within ESLint, you can opt to extend the `@cabify/eslint-config/legacy` configuration instead of `@cabify/eslint-config/recommended`:
-
-```json
-{
-  "extends": ["@cabify/eslint-config/legacy"],
-  ...
 }
 ```
 

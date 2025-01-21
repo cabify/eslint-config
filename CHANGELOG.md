@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.0.0] - 2025-01-21
+
+- Migration to [flat configs](https://eslint.org/docs/latest/use/configure/configuration-files)
+- Migrate the code to es6
+- Add new compilation process to build the lib to es6 and common-js
+- Add new recommended rules.
+
 ## [2.1.4] - 2024-09-12
 
 - Fixing dependencies not published properly in `v2.1.3`.
