@@ -21,11 +21,15 @@ const getConditionalPackages = () => {
   isJestAvailable = isPackageAvailable('jest');
 
   if (isTSAvailable) {
+    // this file will be included in the build process
+    // eslint-disable-next-line import/no-unresolved
     const tsModule = require('./ts.cjs');
     tsConfigs = tsModule.tsLintConfig;
   }
 
   if (isJestAvailable) {
+    // this file will be included in the build process
+    // eslint-disable-next-line import/no-unresolved
     const jestModule = require('./jest.cjs');
     jestConfigs = jestModule.jestConf;
   }

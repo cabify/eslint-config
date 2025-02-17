@@ -41,7 +41,7 @@
   "exports": {
     ".": {
       "require": "./dist/eslint.config.cjs",
-      "import": "./eslint.config.js"
+      "import": "./dist/eslint.config.js"
     }
   },
   "dependencies": {
@@ -80,6 +80,7 @@
     "yarn": "1.22.17"
   },
   "files": [
-    "dist"
+    "dist",
+    "eslint.config.js"
   ]
 }
