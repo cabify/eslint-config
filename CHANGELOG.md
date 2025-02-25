@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [3.0.0] - 2025-01-21
 
-- Migration to [flat configs](https://eslint.org/docs/latest/use/configure/configuration-files)
+- Migration to [flat configs](https://eslint.org/docs/latest/use/configure/configuration-files) making it compatible with `ESlint v9`.
 - Migrate the code to es6
 - Add new compilation process to build the lib to es6 and common-js
 - Add new recommended rules.
