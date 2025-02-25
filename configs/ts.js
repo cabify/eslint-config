@@ -1,9 +1,11 @@
-module.exports = {
-  plugins: ['@typescript-eslint'],
-  extends: [
-    'plugin:@typescript-eslint/recommended',
-    'plugin:@typescript-eslint/recommended-requiring-type-checking',
-  ],
+/* eslint-disable import/no-unresolved */
+
+import path from 'path';
+import tseslint from 'typescript-eslint';
+
+const tsCustomConfig = {
+  name: 'ts-cabify-eslint-config',
+  files: ['**/*.ts', '**/*.tsx'],
   rules: {
     '@typescript-eslint/restrict-template-expressions': [
       'error',
@@ -135,4 +137,29 @@ module.exports = {
     'no-redeclare': 'off', // superseeded by @typescript-eslint/no-redeclare
     'no-shadow': 'off', // superseeded by @typescript-eslint/no-shadow
   },
+  languageOptions: {
+    parserOptions: {
+      projectService: true,
+      tsconfigRootDir: path.resolve(process.cwd()),
+    },
+  },
+  ignores: ['*.d.ts'],
 };
+
+const tsLintConfig = tseslint.config(
+  tseslint.configs.recommended,
+  tseslint.configs.recommendedTypeChecked,
+  tsCustomConfig,
+);
+
+if (tsLintConfig.length) {
+  tsLintConfig.forEach((tsconfig) => {
+    // eslint-disable-next-line no-param-reassign
+    tsconfig.files = ['**/*.ts', '**/*.tsx'];
+    // eslint-disable-next-line no-param-reassign
+    tsconfig.ignores = ['**/*.d.ts'];
+  });
+}
+
+// eslint-disable-next-line import/prefer-default-export
+export { tsLintConfig };

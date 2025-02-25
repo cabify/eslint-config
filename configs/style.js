@@ -1,4 +1,5 @@
-module.exports = {
+export default {
+  name: 'style-cabify-eslint-config',
   rules: {
     // require camel case names
     // TODO: semver-major (eslint 5): add ignoreDestructuring: false option

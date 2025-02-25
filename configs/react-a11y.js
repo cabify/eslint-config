@@ -1,12 +1,15 @@
-module.exports = {
-  plugins: ['jsx-a11y', 'react'],
+import jsxAllyPlugin from 'eslint-plugin-jsx-a11y';
 
-  parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
+export default {
+  name: 'react-a11y-cabify-eslint-config',
+  plugins: { 'jsx-a11y': jsxAllyPlugin },
+  languageOptions: {
+    parserOptions: {
+      ecmaFeatures: {
+        jsx: true,
+      },
     },
   },
-
   rules: {
     // Enforce that anchors have content
     // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/anchor-has-content.md
