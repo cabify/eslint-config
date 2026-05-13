@@ -7,6 +7,9 @@ on:
 jobs:
   publish-npm:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -15,6 +18,4 @@ jobs:
           registry-url: https://registry.npmjs.org
       - run: yarn install
       - run: yarn build
-      - run: npm publish --tag ${{ contains(github.ref_name,'beta') && 'beta' || 'latest' }}
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - run: npm publish --provenance --tag ${{ contains(github.ref_name,'beta') && 'beta' || 'latest' }}
