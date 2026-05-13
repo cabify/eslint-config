@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.0.2] - 2025-05-13
+
+### Changed
+
+- Bump `@typescript-eslint/eslint-plugin` to ^8.55.0
+- Bump `eslint-config-prettier` to ^10.1.8
+- Bump `eslint-plugin-react-hooks` to ^7.0.1
+- Bump `globals` to ^17.3.0
+- Bump `prettier` (dev) to 3.8.1
+- Bump `vite` (dev) to ^6.3.5
+- Bump `vite-plugin-static-copy` (dev) to ^3.2.0
+- Bump `vite-plugin-top-level-await` (dev) to ^1.6.0
+- Bump `@rollup/plugin-replace` (dev) to ^6.0.3
+
 ## [3.0.1] - 2025-02-25
 
 - Migration to [flat configs](https://eslint.org/docs/latest/use/configure/configuration-files) making it compatible with `ESlint v9`.
