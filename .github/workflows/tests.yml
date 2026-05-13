@@ -4,4 +4,11 @@ on: [push]
 
 jobs:
   test:
-    uses: cabify/javascript-actions/.github/workflows/tests.yml@main
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: yarn install
+      - run: yarn test
