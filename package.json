@@ -45,7 +45,6 @@
     }
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^8.55.0",
     "confusing-browser-globals": "^1.0.10",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-import": "^2.32.0",
@@ -56,18 +55,19 @@
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-simple-import-sort": "^12.1.1",
-    "globals": "^17.3.0",
-    "typescript-eslint": "^8.17.0"
+    "globals": "^17.3.0"
   },
   "peerDependencies": {
     "eslint": ">= 9.11.0",
-    "prettier": ">= 2.2.1"
+    "prettier": ">= 2.2.1",
+    "typescript-eslint": ">= 8.17.0"
   },
   "devDependencies": {
     "@rollup/plugin-replace": "^6.0.3",
     "eslint": "10.0.1",
     "prettier": "3.8.1",
     "rollup-plugin-copy": "^3.5.0",
+    "typescript-eslint": "8.17.0",
     "vite": "^6.3.5",
     "vite-plugin-static-copy": "^3.2.0",
     "vite-plugin-top-level-await": "^1.6.0"
